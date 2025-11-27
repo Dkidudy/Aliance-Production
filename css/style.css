@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
 @font-face {
   font-family: "Bebas Neue";
@@ -20,44 +20,44 @@ body {
   font-variation-settings: "wdth" 100;
 }
 .container {
-  max-width: 90rem;
+  max-width: 1440px;
   margin: auto;
 }
 .navbar {
   display: flex;
   align-items: center;
   color: #fff;
-  height: 5.875rem;
+  height: 94px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 2;
-  border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+  border-bottom: 0.0625rem solid rgba(235, 235, 240, 0.2);
   transition: background-color 0.5s;
 }
 .phone-icon {
   fill: #5c8ee6;
 }
 .logo-svg {
-  width: 9rem;
-  height: 2.75rem;
+  width: 144px;
+  height: 44px;
 }
 .navbar-light {
   background-color: #fff;
   color: #292d33;
-  height: 5.625rem;
+  height: 90px;
 }
 .navbar-light .header-logo-path {
   fill: #292d33;
 }
 .header {
-  padding-top: 5.875rem;
+  padding-top: 94px;
 }
 .header-image {
   background-image: url("../img/header-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom -55px;
+  background-position: center bottom -3.4375rem;
   position: relative;
 }
 .header-image::before {
@@ -73,46 +73,74 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  padding: 25px 3.125rem;
-  border-right: 1px solid rgba(235, 235, 240, 0.2);
+  padding: 1.5625rem 50px;
+  border-right: 0.0625rem solid rgba(235, 235, 240, 0.2);
   height: 100%;
 }
 .header-nav {
   display: flex;
+  align-self: center;
+  height: 100%;
   flex-basis: 100%;
   list-style: none;
   padding: 0;
   padding-left: 3.125rem;
   margin: 0;
 }
+.header-nav-item {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
 .header-nav-item:not("last-child") {
   margin-right: 4%;
 }
+
 .header-nav-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
   text-decoration: none;
   font-size: 1rem;
+  padding: 1.1875rem;
   color: inherit;
-  padding: 3px;
+  position: relative;
+}
+.header-nav-link::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+  background-color: #5c8ee6;
+  transition: width 0.2s;
+  right: 0;
+  left: auto;
+}
+.header-nav-link:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 .header-phone {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 0.625rem;
-  margin-right: 3.125rem;
+  gap: 10px;
+  margin-right: 50px;
 }
 .header-phone-link {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
   color: inherit;
 }
 .button {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 160%;
   color: #ffffff;
   background: #3a71d1;
-  padding: 1.5625rem 3.75rem;
+  padding: 25px 60px;
   border: none;
   display: inline-block;
   cursor: pointer;
@@ -120,70 +148,70 @@ body {
 .navbar-button {
   flex-shrink: 0;
   height: 100%;
-  padding: 1.5625rem 3.125rem;
+  padding: 25px 50px;
 }
-.header-button .button-icon {
+.button-icon {
   display: none;
 }
 .header-button {
-  padding: 1.625rem 3.75rem;
+  padding: 26px 60px;
 }
 .seporator {
   background: #5c8ee6;
-  width: 9.375rem;
-  height: 0.125rem;
+  width: 150px;
+  height: 2px;
 }
 .header-content {
-  padding-top: 9.375rem;
+  padding-top: 150px;
   position: relative;
   z-index: 1;
   color: #fff;
 }
 .header-title {
-  max-width: 67.5rem;
+  max-width: 1080px;
   font-family: "Bebas Neue";
-  font-size: 5.375rem;
+  font-size: 86px;
   line-height: 120%;
-  margin: 1.875rem 0;
-  letter-spacing: 0.8px;
-  word-spacing: -1.6px;
+  margin: 30px 0;
+  letter-spacing: 0.05rem;
+  word-spacing: -0.1rem;
 }
 .header-text {
-  max-width: 45rem;
+  max-width: 720px;
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 160%;
-  margin-bottom: 3.125rem;
+  margin-bottom: 50px;
 }
 .header-features {
   display: flex;
-  min-width: 10.5rem;
+  min-width: 168px;
   padding: 0;
-  margin-top: 6.25rem;
+  margin-top: 100px;
   list-style: none;
   color: #fff;
   position: relative;
 }
 .header-features-item {
-  padding: 1.875rem 3.125rem;
+  padding: 30px 50px;
   min-height: 100%;
-  width: 18rem;
-  border: 0.0625rem solid rgba(235, 235, 240, 0.2);
+  width: 288px;
+  border: 1px solid rgba(235, 235, 240, 0.2);
 }
 .slider-buttons-steps {
   display: none;
-  height: 40px;
+  height: 2.5rem;
 }
 .slider-buttons {
   display: none;
-  height: 44px;
+  height: 2.75rem;
 }
 .slider-button-prev,
 .slider-button-next {
   height: 100%;
   flex-basis: 50%;
-  border: 1px solid rgba(235, 235, 240, 0.2);
+  border: 0.0625rem solid rgba(235, 235, 240, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,18 +219,18 @@ body {
 }
 .header-features-text {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 160%;
   margin-bottom: 0;
-  margin-top: 1.125rem;
+  margin-top: 18px;
 }
 .section {
-  margin-top: 9.375rem;
-  margin-bottom: 9.375rem;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 .section-title {
   font-family: "Bebas Neue";
-  font-size: 3.75rem;
+  font-size: 60px;
   line-height: 120%;
   color: #292d33;
 }
@@ -210,32 +238,24 @@ body {
 .swiper-steps {
   display: none;
 }
-
-/* Обычный список шагов на десктопе */
-.steps {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  gap: 1.875rem;
-}
-
 /* Кнопки второго слайдера по умолчанию скрыты */
 .slider-buttons-steps {
-  display: none;
-  height: 40px;
+  display: flex;
+  height: 2.5rem;
+  justify-content: flex-end;
 }
 .steps {
   display: flex;
   list-style: none;
   padding: 0;
-  gap: 1.875rem;
+  gap: 30px;
 }
 .steps-item {
-  min-width: 20.625rem;
+  min-width: 330px;
 }
 .steps-num {
   font-family: "Bebas Neue";
-  font-size: 3rem;
+  font-size: 48px;
   line-height: 120%;
   color: #5c8ee6;
   display: flex;
@@ -243,50 +263,164 @@ body {
 }
 .steps-num::after {
   content: "";
-  height: 0.0625rem;
+  height: 1px;
   background: #ebebf0;
   width: 100%;
-  margin-left: 1.875rem;
+  margin-left: 30px;
 }
 .steps-title {
   font-weight: 400;
-  font-size: 1.75rem;
+  font-size: 28px;
   line-height: 160%;
   color: #292d33;
-  margin-top: 1.875rem;
-  margin-bottom: 0.625rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .steps-text {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 160%;
   color: #828a99;
-  margin-top: 0.625rem;
-  margin-bottom: 1.25rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .steps-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-weight: 37.5rem;
-  font-size: 1rem;
+  font-weight: 600px;
+  font-size: 16px;
   line-height: 160%;
   color: #5c8ee6;
 }
 .steps-link::before {
   content: "";
-  height: 0.0625rem;
+  height: 1px;
   background: #5c8ee6;
-  width: 2.5rem;
-  margin-right: 1.25rem;
+  width: 40px;
+  margin-right: 1rem;
+  transition: width 0.2s;
 }
-@media (max-width: 1800px) {
-  .navbar {
-    padding-left: 3px;
-  }
-  .header-image {
-    background-position: center 0;
-  }
+.steps-link:hover::before {
+  width: 60px;
+}
+/*  ПЕРВЫЙ слайдер — стрелки показываем на планшетах/мобилках */
+.slider-buttons {
+  display: flex;
+}
+
+/* ВТОРОЙ блок: теперь используем слайдер вместо статичного списка */
+.steps {
+  display: none; /* скрываем обычный список */
+}
+
+.swiper-steps {
+  display: block; /* показываем слайдер */
+  position: relative;
+  overflow: hidden; /* как у обычного .swiper */
+}
+
+.slider-buttons-steps {
+  display: none;
+  background-color: #5c8ee5;
+  width: 7.5rem;
+  height: 2.5rem;
+  justify-content: flex-end;
+}
+.steps-button-prev,
+.steps-button-next {
+  height: 100%;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  text-decoration: none;
+  flex-basis: 33%;
+  border: 0.0625rem solid #ebebf0;
+  position: relative;
+  transition: border 0.2s;
+}
+.card:hover .card-title {
+  color: #5c8ee6;
+}
+.card:hover {
+  border-color: #5c8ee6;
+}
+.card-content {
+  padding: 2.5rem 3.125rem;
+}
+.card-title {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 160%;
+  color: #292d33;
+  margin-top: 0;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.card-text {
+  font-size: 1rem;
+  line-height: 140%;
+  color: #828a99;
+  margin-bottom: 24.625rem;
+}
+.card-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 90%;
+}
+.marks {
+  display: flex;
+}
+.mark {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2.5rem 3.125rem;
+  border: 0.0625rem solid #ebebf0;
+  transition: border-color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.mark:hover {
+  border-color: #5c8ee6;
+}
+.mark:hover .mark-title,
+.mark:hover .mark-text {
+  color: #5c8ee6;
+}
+.mark-image {
+  flex: 170px;
+  max-width: 170px;
+  height: auto;
+  margin-right: 40px;
+  display: block;
+  position: static;
+}
+.mark-content {
+  flex: 1 1 auto;
+}
+.mark-title {
+  font-weight: 400;
+  color: #292d33;
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+.mark-text {
+  color: #828a99;
+  margin: 0;
+  line-height: 1.5;
 }
 @media (max-width: 1700px) {
   .html {
@@ -317,53 +451,24 @@ body {
   }
 }
 @media (max-width: 1200px) {
-  .button {
-    margin: 2px;
-  }
   .container {
-    max-width: 70rem;
+    min-width: 1120px;
   }
   .header-phone {
     display: none;
   }
   .navbar {
-    height: 5rem;
+    height: 80px;
   }
   .navbar-button {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 32px;
+    padding-right: 32px;
   }
-
-  /* ✅ ПЕРВЫЙ слайдер — стрелки показываем на планшетах/мобилках */
-  .slider-buttons {
-    display: flex;
-  }
-
-  /* ✅ ВТОРОЙ блок: теперь используем слайдер вместо статичного списка */
-  .steps {
-    display: none; /* скрываем обычный список */
-  }
-
-  .swiper-steps {
-    display: block; /* показываем слайдер */
-    position: relative;
-    overflow: hidden; /* как у обычного .swiper */
-  }
-
   .slider-buttons-steps {
     display: flex;
-    background-color: #5c8ee5;
-    width: 120px;
-    height: 40px;
   }
-  .slider-button-prev-steps,
-  .slider-button-next-steps {
-    height: 100%;
+  .card {
     flex-basis: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
   }
 }
 @media (max-width: 992px) {
@@ -381,12 +486,12 @@ body {
     justify-content: center;
   }
   .mobile-menu-toggle {
-    width: 80px;
+    width: 5rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.8rem;
+    padding: 28.8px;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
   }
   .navbar-light .mobile-menu-line {
@@ -431,50 +536,50 @@ body {
     padding: 0;
   }
   .mobile-menu-nav-item {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
   .mobile-menu-link {
     text-decoration: none;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 160%;
     color: #292d33;
   }
   .mobile-submenu {
     list-style: none;
     padding: 0;
-    padding-left: 1rem;
-    padding-top: 1rem;
+    padding-left: 16px;
+    padding-top: 16px;
   }
   .mobile-submenu-link {
     text-decoration: none;
     color: #828a99;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 160%;
   }
   .mobile-phone {
     display: block;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 160%;
     color: #292d33;
     text-decoration-line: underline;
-    border-top: 1px solid #ebebf0;
-    padding-top: 2rem;
-    margin-bottom: 1.5rem;
+    border-top: 0.0625rem solid #ebebf0;
+    padding-top: 32px;
+    margin-bottom: 24px;
   }
   .mobile-info {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 16px;
+    margin-bottom: 16px;
   }
   .mobile-info-address,
   .mobile-info-email {
     text-decoration: none;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 160%;
     color: #292d33;
   }
@@ -490,20 +595,23 @@ body {
     display: none;
   }
   .close-menu .mobile-menu-line:nth-child(1) {
-    transform: rotate(45deg) translateY(10px);
+    transform: rotate(45deg) translateY(0.625rem);
   }
   .close-menu .mobile-menu-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-10px);
+    transform: rotate(-45deg) translateY(-0.625rem);
   }
   @media (max-width: 768px) {
     .container {
-      max-width: 40rem;
+      max-width: 640px;
     }
     .header-title {
-      font-size: 4rem;
+      font-size: 64px;
     }
     .header-content {
-      padding-top: 3rem;
+      padding-top: 48px;
+    }
+    .card {
+      flex-basis: 100%;
     }
   }
   @media (max-width: 576px) {
@@ -511,10 +619,10 @@ body {
       max-width: 90%;
     }
     .header-title {
-      font-size: 2rem;
+      font-size: 32px;
     }
     .header-content {
-      padding-top: 3rem;
+      padding-top: 48px;
     }
   }
 }
