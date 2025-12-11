@@ -343,7 +343,7 @@ body {
 .card {
   text-decoration: none;
   flex-basis: 33%;
-  border: 0.0625rem solid #ebebf0;
+  border: 1px solid #ebebf0;
   position: relative;
   transition: border 0.2s;
 }
@@ -378,49 +378,53 @@ body {
   z-index: 0;
   width: 90%;
 }
-.marks {
+.trademark-cards {
   display: flex;
 }
-.mark {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 2.5rem 3.125rem;
-  border: 0.0625rem solid #ebebf0;
-  transition: border-color 0.2s;
-  cursor: pointer;
+.trademark-card {
+  flex-basis: 50%;
   text-decoration: none;
+  border: 1px solid #ebebf0;
+  transition: border 0.2s;
+  padding: 3.125rem;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto 2fr;
+  grid-column-gap: 3.125rem;
+  grid-template-areas:
+    "logo title title"
+    "logo text text";
 }
-.mark:hover {
-  border-color: #5c8ee6;
+.trademark-card-logo {
+  width: 100%;
+  fill: #828a99;
+  grid-area: logo;
 }
-.mark:hover .mark-title,
-.mark:hover .mark-text {
-  color: #5c8ee6;
-}
-.mark-image {
-  flex: 170px;
-  max-width: 170px;
-  height: auto;
-  margin-right: 40px;
-  display: block;
-  position: static;
-}
-.mark-content {
-  flex: 1 1 auto;
-}
-.mark-title {
+.trademark-card-title {
+  font-size: 1.75rem;
+  margin: 0;
+  line-height: 160%;
   font-weight: 400;
   color: #292d33;
-  font-size: 28px;
-  margin: 0 0 16px;
+  grid-area: title;
 }
-.mark-text {
+.trademark-card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
   color: #828a99;
-  margin: 0;
-  line-height: 1.5;
+  grid-area: text;
+  margin-top: 0.625rem;
+}
+.trademark-card:hover {
+  border-color: #5c8ee6;
+}
+.trademark-card:hover .trademark-card-logo {
+  fill: #5c8ee6;
+}
+.trademark-card:hover .trademark-card-title {
+  color: #5c8ee6;
 }
 @media (max-width: 1700px) {
   .html {
@@ -451,9 +455,6 @@ body {
   }
 }
 @media (max-width: 1200px) {
-  .container {
-    min-width: 1120px;
-  }
   .header-phone {
     display: none;
   }
@@ -469,6 +470,9 @@ body {
   }
   .card {
     flex-basis: 50%;
+  }
+  .trademark-card {
+    grid-template-columns: auto auto;
   }
 }
 @media (max-width: 992px) {
@@ -600,29 +604,48 @@ body {
   .close-menu .mobile-menu-line:nth-child(3) {
     transform: rotate(-45deg) translateY(-0.625rem);
   }
-  @media (max-width: 768px) {
-    .container {
-      max-width: 640px;
-    }
-    .header-title {
-      font-size: 64px;
-    }
-    .header-content {
-      padding-top: 48px;
-    }
-    .card {
-      flex-basis: 100%;
-    }
+  .trademark-cards {
+    flex-direction: column;
   }
-  @media (max-width: 576px) {
-    .container {
-      max-width: 90%;
-    }
-    .header-title {
-      font-size: 32px;
-    }
-    .header-content {
-      padding-top: 48px;
-    }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+  .header-title {
+    font-size: 64px;
+  }
+  .header-content {
+    padding-top: 48px;
+  }
+  .card {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .header-title {
+    font-size: 32px;
+  }
+  .header-content {
+    padding-top: 48px;
+  }
+  .trademark-card {
+    grid-template-areas:
+      "logo title"
+      "text text";
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 70%;
+  }
+  .header-title {
+    font-size: 16px;
+  }
+  .header-content {
+    padding-top: 24px;
   }
 }
