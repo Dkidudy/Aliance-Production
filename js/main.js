@@ -32,7 +32,7 @@ mMenuToggle.addEventListener("click", (event) => {
 });
 
 // Первый слайдер (в шапке)
-const swiper = new Swiper(".swiper", {
+const headerSwiper = new Swiper(".header-swiper", {
   speed: 400,
   autoHeight: true,
   slidesPerView: 1,
@@ -60,5 +60,18 @@ const stepsSwiper = new Swiper(".swiper-steps", {
     576: { slidesPerView: 2 },
     768: { slidesPerView: 3 },
     1024: { slidesPerView: 4 },
+  },
+});
+
+const swiperBlog = new Swiper(".blog-slider", {
+  speed: 400,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".blog-button-next",
+    prevEl: ".blog-button-prev",
+  },
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
   },
 });

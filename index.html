@@ -200,7 +200,7 @@
         <!-- ./header-content -->
 
         <!-- основной блок слайдера -->
-        <div class="swiper">
+        <div class="swiper header-swiper">
           <ul class="swiper-wrapper header-features">
             <li class="swiper-slide header-features-item">
               <img
@@ -251,14 +251,20 @@
           <!-- кнопки навигации -->
           <div class="slider-buttons">
             <div class="slider-button-prev">
-              <svg width="36" height="24">
-                <use href="/img/sprite/arrow-prev.svg"></use>
-              </svg>
+              <img
+                src="img/sprite/arrow-prev.svg"
+                alt="Prev"
+                width="36"
+                height="24"
+              />
             </div>
             <div class="slider-button-next">
-              <svg width="36" height="24">
-                <use href="/img/sprite/arrow-next.svg"></use>
-              </svg>
+              <img
+                src="img/sprite/arrow-next.svg"
+                alt="Next"
+                width="36"
+                height="24"
+              />
             </div>
           </div>
           <!-- /.slider-buttons -->
@@ -308,16 +314,22 @@
               </li>
             </ul>
             <!--steps-buttons-->
-            <div class="slider-buttons-steps">
-              <div class="steps-button-prev">
-                <svg width="36" height="24">
-                  <use href="/img/sprite/arrow-prev.svg"></use>
-                </svg>
+            <div class="slider-buttons-steps primary-buttons-">
+              <div class="steps-button-prev primary-button-prev">
+                <img
+                  src="img/sprite/arrow-prev.svg"
+                  alt="Prev"
+                  width="36"
+                  height="24"
+                />
               </div>
-              <div class="steps-button-next">
-                <svg width="36" height="24">
-                  <use href="/img/sprite/arrow-next.svg"></use>
-                </svg>
+              <div class="steps-button-next primary-button-next">
+                <img
+                  src="img/sprite/arrow-next.svg"
+                  alt="Next"
+                  width="36"
+                  height="24"
+                />
               </div>
             </div>
           </div>
@@ -594,6 +606,105 @@
       <!-- /.container -->
     </section>
     <!-- /.section clients -->
+    <section class="section blog">
+      <div class="container">
+        <div class="seporator"></div>
+        <h2 class="section-title">Блог экспертов в области производства</h2>
+        <!-- Slider main container -->
+        <div class="swiper blog-slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <a href="#" class="swiper-slide blog-card">
+              <img
+                src="img/blog/blog-photo.jpg"
+                alt=""
+                class="blog-card-image"
+              />
+              <h3 class="blog-card-title">
+                Современная методология разработки одухотворила всех причастных
+              </h3>
+              <p class="blog-card-text">
+                Действия представителей оппозиции, превозмогая сложившуюся
+                непростую экономическую ситуацию, в равной степени
+                предоставлены...
+              </p>
+            </a>
+            <a href="#" class="swiper-slide blog-card">
+              <img
+                src="img/blog/blog-post.jpg"
+                alt=""
+                class="blog-card-image"
+              />
+              <h3 class="blog-card-title">
+                Сложно сказать, почему жизнь прекрасна
+              </h3>
+              <p class="blog-card-text">
+                Сложно сказать, почему элементы политического процесса
+                функционально разнесены на независимые элементы. Безусловно,
+                высокотехнологичная...
+              </p>
+            </a>
+            <a href="#" class="swiper-slide blog-card">
+              <img
+                src="img/blog/blog-photo.jpg"
+                alt=""
+                class="blog-card-image"
+              />
+              <h3 class="blog-card-title">
+                Современная методология разработки одухотворила всех причастных
+              </h3>
+              <p class="blog-card-text">
+                Действия представителей оппозиции, превозмогая сложившуюся
+                непростую экономическую ситуацию, в равной степени
+                предоставлены...
+              </p>
+            </a>
+            <a href="#" class="swiper-slide blog-card">
+              <img
+                src="img/blog/blog-post.jpg"
+                alt=""
+                class="blog-card-image"
+              />
+              <h3 class="blog-card-title">
+                Сложно сказать, почему жизнь прекрасна
+              </h3>
+              <p class="blog-card-text">
+                Сложно сказать, почему элементы политического процесса
+                функционально разнесены на независимые элементы. Безусловно,
+                высокотехнологичная...
+              </p>
+            </a>
+          </div>
+
+          <div class="blog-slider-footer">
+            <a href="#" class="button-link">Весь блог</a>
+            <div class="blog-buttons primary-buttons-wrapper">
+              <div class="blog-button-prev primary-button-prev">
+                <img
+                  src="img/sprite/arrow-prev.svg"
+                  alt="Prev"
+                  width="36"
+                  height="24"
+                />
+              </div>
+              <div class="blog-button-next primary-button-next">
+                <img
+                  src="img/sprite/arrow-next.svg"
+                  alt="Next"
+                  width="36"
+                  height="24"
+                />
+              </div>
+            </div>
+            <!--blog-button-->
+          </div>
+          <!-- /.blog-slider-footer -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section blog -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
