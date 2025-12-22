@@ -75,3 +75,45 @@ const swiperBlog = new Swiper(".blog-slider", {
     768: { slidesPerView: 2 },
   },
 });
+
+const modal = document.querySelector(".modal");
+const modalToggle = document.querySelectorAll("[data-toggle=modal]");
+const modalClose = document.querySelector(".modal-close");
+const modalDialog = document.querySelector(".modal-dialog");
+
+const openModal = () => {
+  modal.classList.add("is-open");
+  document.body.style.overflow = "hidden"; // опционально
+};
+
+const closeModal = () => {
+  modal.classList.remove("is-open");
+  document.body.style.overflow = ""; // опционально
+};
+
+modalToggle.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal();
+  });
+});
+
+modalClose.addEventListener("click", (event) => {
+  event.preventDefault();
+  closeModal();
+});
+
+// Закрытие по клику вне окна (по фону .modal)
+modal.addEventListener("click", (event) => {
+  // если кликнули НЕ внутри .modal-dialog — значит это фон
+  if (!modalDialog.contains(event.target)) {
+    closeModal();
+  }
+});
+
+// Закрытие по Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && modal.classList.contains("is-open")) {
+    closeModal();
+  }
+});
